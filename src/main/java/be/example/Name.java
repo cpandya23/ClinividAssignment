@@ -27,8 +27,8 @@ public class Name {
     private String middle;
     @JsonProperty("last")
     private String last;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  
+    
 
     @JsonProperty("first")
     public String getFirst() {
@@ -58,16 +58,6 @@ public class Name {
     @JsonProperty("last")
     public void setLast(String last) {
         this.last = last;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 

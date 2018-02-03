@@ -19,45 +19,31 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 public class Coords {
 
     @JsonProperty("long")
-    private Integer _long;
+    private Double longi;
     @JsonProperty("lat")
-    private Integer lat;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Double lat;
+    
 
     @JsonProperty("long")
-    public Integer getLong() {
-        return _long;
+    public Double getLong() {
+        return longi;
     }
 
     @JsonProperty("long")
-    public void setLong(Integer _long) {
-        this._long = _long;
+    public void setLong(Double longi) {
+        this.longi = longi;
     }
 
     @JsonProperty("lat")
-    public Integer getLat() {
+    public Double getLat() {
         return lat;
     }
 
     @JsonProperty("lat")
-    public void setLat(Integer lat) {
+    public void setLat(Double lat) {
         this.lat = lat;
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
-    /*@Override
-    public String toString() {
-        return new ToStringBuilder(this).append("_long", _long).append("lat", lat).append("additionalProperties", additionalProperties).toString();
-    }*/
+  
 
 }

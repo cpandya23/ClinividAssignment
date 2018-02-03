@@ -22,9 +22,7 @@ public class Location {
     private String name;
     @JsonProperty("coords")
     private Coords coords;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
+   
     @JsonProperty("name")
     public String getName() {
         return name;
@@ -45,15 +43,6 @@ public class Location {
         this.coords = coords;
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 
 }

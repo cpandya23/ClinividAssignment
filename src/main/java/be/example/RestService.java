@@ -44,8 +44,8 @@ public class RestService {
 		for(String x:locArray) {
 			String locDetails[]=x.split(" ");
 			location.setName(locDetails[0]);
-			coords.setLat(Integer.parseInt(locDetails[1]));
-			coords.setLong(Integer.parseInt(locDetails[2]));
+			coords.setLat(Double.parseDouble(locDetails[1]));
+			coords.setLong(Double.parseDouble(locDetails[2]));
 			location.setCoords(coords);
 			locations.add(location);
 		}
